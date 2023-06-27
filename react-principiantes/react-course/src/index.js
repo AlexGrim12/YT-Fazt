@@ -4,11 +4,13 @@ import { Greeting, UserCard } from './Greeating'
 import Product, { Navbar } from './Product'
 import { Button } from './Button'
 import { TaskCard } from './task'
+import { Saludar } from './Saludar'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
   <>
-    <TaskCard ready={true}/>
+    <TaskCard ready={true} />
+    <Saludar/>
   </>
 )
