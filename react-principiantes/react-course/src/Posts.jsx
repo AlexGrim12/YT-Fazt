@@ -1,3 +1,4 @@
+import {AiFillCloud} from 'react-icons/ai'
 export const Posts = () => {
   return (
     <button
@@ -8,6 +9,7 @@ export const Posts = () => {
           .catch((error) => console.log(error))
       }
     >
+      <AiFillCloud/>
       Traer datos
     </button>
   )
