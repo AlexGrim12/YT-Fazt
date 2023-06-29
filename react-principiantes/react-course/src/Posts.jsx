@@ -1,4 +1,5 @@
-import {AiFillCloud} from 'react-icons/ai'
+import { AiFillCloud } from 'react-icons/ai'
+
 export const Posts = () => {
   return (
     <button

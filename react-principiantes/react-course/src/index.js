@@ -1,22 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
-import { Posts } from './Posts'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-const users = [
-  { id: 1, name: 'Alex', image: 'https://robohash.org/usuario1' },
-  { id: 2, name: 'Leo', image: 'https://robohash.org/usuario2' },
-  { id: 3, name: 'Juan', image: 'https://robohash.org/usuario3' },
-]
+function Counter() {
+  const [counter, setCounter] = useState(0)
+
+  return (
+    <div>
+      <h1>Counter: {counter}</h1>
+      <button onClick={() => setCounter(counter-1)}>Restar</button>
+      <button onClick={() => setCounter(0)}>Reiniciar</button>
+      <button onClick={() => setCounter(counter+1)}>Sumar</button>
+    </div>
+  )
+}
 
 root.render(
   <>
-    {users.map((user, index) => (
-      <div key={index}>
-        <h1>{user.name}</h1>
-        <img src={user.image} alt="" />
-      </div>
-    ))}
+    <Counter />
   </>
 )
