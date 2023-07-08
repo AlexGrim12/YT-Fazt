@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import TaskContext from '../context/TaskContext'
 
-function TaskForm({ createTask }) {
+function TaskForm() {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
+  const { createTask } = useContext(TaskContext)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -18,7 +20,8 @@ function TaskForm({ createTask }) {
           type="text"
           placeholder="Escribe tu tarea"
           onChange={(e) => setTitle(e.target.value)}
-          value={title} autoFocus
+          value={title}
+          autoFocus
         />
         <textarea
           placeholder="Escribe la descripcion de tu tarea"
